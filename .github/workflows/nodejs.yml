@@ -48,3 +48,15 @@ jobs:
             fi
         fi
     - run: npm run lint
+    - name: Push to imperial-builds repository
+      id: push_directory
+      uses: cpina/github-action-push-to-another-repository@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source-directory: 'output'
+        destination-github-username: 'imperial'
+        destination-repository-name: 'imperial-ace-builds'
+        user-email: hello@looskie.com
+        commit-message: See ORIGIN_COMMIT from $GITHUB_REF
+        target-branch: main
