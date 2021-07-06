@@ -374,6 +374,7 @@ var themeData = [
     ["IPlastic"       ],
     ["Solarized Light"],
     ["TextMate"       ],
+    ["Imperial"       ],
     ["Tomorrow"       ],
     ["Xcode"          ],
     ["Kuroir"],

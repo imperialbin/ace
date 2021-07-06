@@ -102,7 +102,7 @@ var highlight = function(el, opts, callback) {
     var mode = opts.mode || m && ("ace/mode/" + m[1]);
     if (!mode)
         return false;
-    var theme = opts.theme || "ace/theme/textmate";
+    var theme = opts.theme || "ace/theme/imperial";
     
     var data = "";
     var nodes = [];

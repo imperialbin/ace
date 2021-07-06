@@ -19000,7 +19000,7 @@ config.defineOptions(VirtualRenderer.prototype, "renderer", {
     theme: {
         set: function(val) { this.setTheme(val); },
         get: function() { return this.$themeId || this.theme; },
-        initialValue: "./theme/textmate",
+        initialValue: "./theme/imperial",
         handlesSet: true
     },
     hasCssTransforms: {
@@ -20579,135 +20579,125 @@ var FoldMode = exports.FoldMode = function() {};
 
 });
 
-define("ace/theme/textmate",["require","exports","module","ace/lib/dom"], function(require, exports, module) {
-"use strict";
+define("ace/theme/imperial",["require","exports","module","ace/lib/dom"], function (require, exports, module) {
+  "use strict";
 
-exports.isDark = false;
-exports.cssClass = "ace-tm";
-exports.cssText = ".ace-tm .ace_gutter {\
-background: #f0f0f0;\
-color: #333;\
+  exports.isDark = true;
+  exports.cssClass = "ace-tm";
+  exports.cssText = "\
+.ace_gutter {\
+background: #24292e;\
+color: rgb(127, 130, 132);\
+transition: unset !important;\
 }\
-.ace-tm .ace_print-margin {\
+.ace_print-margin {\
 width: 1px;\
 background: #e8e8e8;\
 }\
-.ace-tm .ace_fold {\
-background-color: #6B72E6;\
+.ace-github-dark {\
+background-color: #20272b;\
+color: #dddddd;\
 }\
-.ace-tm {\
-background-color: #FFFFFF;\
-color: black;\
+.ace_cursor {\
+color: #ffffff;\
 }\
-.ace-tm .ace_cursor {\
-color: black;\
+.ace_marker-layer .ace_selection {\
+background: #31383e;\
 }\
-.ace-tm .ace_invisible {\
-color: rgb(191, 191, 191);\
+.ace_multiselect .ace_selection.ace_start {\
+box-shadow: 0 0 3px 0px #20272b;\
+border-radius: 2px;\
 }\
-.ace-tm .ace_storage,\
-.ace-tm .ace_keyword {\
-color: blue;\
+.ace_marker-layer .ace_step {\
+background: rgb(198, 219, 174);\
 }\
-.ace-tm .ace_constant {\
-color: rgb(197, 6, 11);\
-}\
-.ace-tm .ace_constant.ace_buildin {\
-color: rgb(88, 72, 246);\
-}\
-.ace-tm .ace_constant.ace_language {\
-color: rgb(88, 92, 246);\
-}\
-.ace-tm .ace_constant.ace_library {\
-color: rgb(6, 150, 14);\
-}\
-.ace-tm .ace_invalid {\
-background-color: rgba(255, 0, 0, 0.1);\
-color: red;\
-}\
-.ace-tm .ace_support.ace_function {\
-color: rgb(60, 76, 114);\
-}\
-.ace-tm .ace_support.ace_constant {\
-color: rgb(6, 150, 14);\
-}\
-.ace-tm .ace_support.ace_type,\
-.ace-tm .ace_support.ace_class {\
-color: rgb(109, 121, 222);\
-}\
-.ace-tm .ace_keyword.ace_operator {\
-color: rgb(104, 118, 135);\
-}\
-.ace-tm .ace_string {\
-color: rgb(3, 106, 7);\
-}\
-.ace-tm .ace_comment {\
-color: rgb(76, 136, 107);\
-}\
-.ace-tm .ace_comment.ace_doc {\
-color: rgb(0, 102, 255);\
-}\
-.ace-tm .ace_comment.ace_doc.ace_tag {\
-color: rgb(128, 159, 191);\
-}\
-.ace-tm .ace_constant.ace_numeric {\
-color: rgb(0, 0, 205);\
-}\
-.ace-tm .ace_variable {\
-color: rgb(49, 132, 149);\
-}\
-.ace-tm .ace_xml-pe {\
-color: rgb(104, 104, 91);\
-}\
-.ace-tm .ace_entity.ace_name.ace_function {\
-color: #0000A2;\
-}\
-.ace-tm .ace_heading {\
-color: rgb(12, 7, 255);\
-}\
-.ace-tm .ace_list {\
-color:rgb(185, 6, 144);\
-}\
-.ace-tm .ace_meta.ace_tag {\
-color:rgb(0, 22, 142);\
-}\
-.ace-tm .ace_string.ace_regex {\
-color: rgb(255, 0, 0)\
-}\
-.ace-tm .ace_marker-layer .ace_selection {\
-background: rgb(181, 213, 255);\
-}\
-.ace-tm.ace_multiselect .ace_selection.ace_start {\
-box-shadow: 0 0 3px 0px white;\
-}\
-.ace-tm .ace_marker-layer .ace_step {\
-background: rgb(252, 255, 0);\
-}\
-.ace-tm .ace_marker-layer .ace_stack {\
-background: rgb(164, 229, 101);\
-}\
-.ace-tm .ace_marker-layer .ace_bracket {\
+.ace_marker-layer .ace_bracket {\
 margin: -1px 0 0 -1px;\
-border: 1px solid rgb(192, 192, 192);\
+border: 1px solid #6e7880;\
 }\
-.ace-tm .ace_marker-layer .ace_active-line {\
-background: rgba(0, 0, 0, 0.07);\
+.ace_marker-layer .ace_active-line {\
+background: #2a3035;\
 }\
-.ace-tm .ace_gutter-active-line {\
-background-color : #dcdcdc;\
+.ace_gutter-active-line {\
+background-color: #2a3035;\
 }\
-.ace-tm .ace_marker-layer .ace_selected-word {\
-background: rgb(250, 250, 255);\
-border: 1px solid rgb(200, 200, 250);\
+.ace_gutter-cell {\
+color: #676767;\
 }\
-.ace-tm .ace_indent-guide {\
-background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==\") right repeat-y;\
+.ace_gutter-active-line {\
+color: #949494;\
+}\
+.ace_marker-layer .ace_selected-word {\
+border: 1px solid #832563;\
+}\
+.ace_fold {\
+background-color: #dd5c69;\
+border-color: #dddddd;\
+}\
+.ace_keyword {\
+color: #dd5c69;\
+}\
+.ace_constant {\
+color: #0099cd;\
+}\
+.ace_support {\
+color: #0099cd;\
+}\
+.ace_support.ace_constant {\
+color: #0099cd;\
+}\
+.ace_support.ace_type {\
+color: #dd5c69;\
+}\
+.ace_storage {\
+color: #dd5c69;\
+}\
+.ace_storage.ace_type {\
+color: #dd5c69;\
+}\
+.ace_invalid.ace_illegal {\
+text-decoration: underline;\
+font-style: italic;\
+color: #f8f8f8;\
+background-color: #e63525;\
+}\
+.ace_invalid.ace_deprecated {\
+text-decoration: underline;\
+font-style: italic;\
+color: #e63525;\
+}\
+.ace_string {\
+color: #79b8ff;\
+}\
+.ace_string.ace_regexp {\
+color: #3c66e2;\
+}\
+.ace_comment {\
+color: #969896;\
+}\
+.ace_variable {\
+color: #fb8764;\
+}\
+.ace_variable.ace_language {\
+color: #0099cd;\
+}\
+.ace_entity.ace_name {\
+color: #9774cb;\
+}\
+.ace_entity.ace_name.ace_tag {\
+color: #7bcc72;\
+}\
+.ace_markup.ace_heading {\
+color: #264ec5;\
+}\
+.ace_markup.ace_list {\
+color: #c26b2b;\
 }\
 ";
-exports.$id = "ace/theme/textmate";
+  exports.$id = "ace/theme/imperial";
 
-var dom = require("../lib/dom");
-dom.importCssString(exports.cssText, exports.cssClass);
+  var dom = require("../lib/dom");
+  dom.importCssString(exports.cssText, exports.cssClass);
 });
 
 define("ace/line_widgets",["require","exports","module","ace/lib/dom"], function(require, exports, module) {
@@ -21258,7 +21248,7 @@ dom.importCssString("\
 
 });
 
-define("ace/ace",["require","exports","module","ace/lib/fixoldbrowsers","ace/lib/dom","ace/lib/event","ace/range","ace/editor","ace/edit_session","ace/undomanager","ace/virtual_renderer","ace/worker/worker_client","ace/keyboard/hash_handler","ace/placeholder","ace/multi_select","ace/mode/folding/fold_mode","ace/theme/textmate","ace/ext/error_marker","ace/config"], function(require, exports, module) {
+define("ace/ace",["require","exports","module","ace/lib/fixoldbrowsers","ace/lib/dom","ace/lib/event","ace/range","ace/editor","ace/edit_session","ace/undomanager","ace/virtual_renderer","ace/worker/worker_client","ace/keyboard/hash_handler","ace/placeholder","ace/multi_select","ace/mode/folding/fold_mode","ace/theme/imperial","ace/ext/error_marker","ace/config"], function(require, exports, module) {
 "use strict";
 
 require("./lib/fixoldbrowsers");
@@ -21276,7 +21266,7 @@ require("./keyboard/hash_handler");
 require("./placeholder");
 require("./multi_select");
 require("./mode/folding/fold_mode");
-require("./theme/textmate");
+require("./theme/imperial");
 require("./ext/error_marker");
 
 exports.config = require("./config");
