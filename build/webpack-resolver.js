@@ -214,6 +214,7 @@ ace.config.setModuleUrl('ace/theme/github', require('file-loader?esModule=false!
 ace.config.setModuleUrl('ace/theme/gob', require('file-loader?esModule=false!./src-noconflict/theme-gob.js'))
 ace.config.setModuleUrl('ace/theme/gruvbox', require('file-loader?esModule=false!./src-noconflict/theme-gruvbox.js'))
 ace.config.setModuleUrl('ace/theme/idle_fingers', require('file-loader?esModule=false!./src-noconflict/theme-idle_fingers.js'))
+ace.config.setModuleUrl('ace/theme/imperial', require('file-loader?esModule=false!./src-noconflict/theme-imperial.js'))
 ace.config.setModuleUrl('ace/theme/iplastic', require('file-loader?esModule=false!./src-noconflict/theme-iplastic.js'))
 ace.config.setModuleUrl('ace/theme/katzenmilch', require('file-loader?esModule=false!./src-noconflict/theme-katzenmilch.js'))
 ace.config.setModuleUrl('ace/theme/kr_theme', require('file-loader?esModule=false!./src-noconflict/theme-kr_theme.js'))

@@ -214,6 +214,7 @@ declare module 'ace-builds/src-noconflict/theme-github';
 declare module 'ace-builds/src-noconflict/theme-gob';
 declare module 'ace-builds/src-noconflict/theme-gruvbox';
 declare module 'ace-builds/src-noconflict/theme-idle_fingers';
+declare module 'ace-builds/src-noconflict/theme-imperial';
 declare module 'ace-builds/src-noconflict/theme-iplastic';
 declare module 'ace-builds/src-noconflict/theme-katzenmilch';
 declare module 'ace-builds/src-noconflict/theme-kr_theme';
