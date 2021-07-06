@@ -28,6 +28,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - run: npm cache clean --force
     - run: npm i && npm i eslint istanbul typescript
     - run: node_modules/.bin/istanbul cover lib/ace/test/all.js
     - run: |
