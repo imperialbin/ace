@@ -20585,6 +20585,10 @@ define("ace/theme/imperial",["require","exports","module","ace/lib/dom"], functi
   exports.isDark = true;
   exports.cssClass = "ace-tm";
   exports.cssText = "\
+.ace_editor {\
+background: #24292e;\
+color: #acacac;\
+}\
 .ace_gutter {\
 background: #24292e;\
 color: rgb(127, 130, 132);\

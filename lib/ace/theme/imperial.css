@@ -2,6 +2,11 @@
  *   under MIT
  *   (https://github.com/primer/github-syntax-theme-generator/blob/master/LICENSE)
  *   */
+
+.ace_editor {
+  background: #24292e;
+  color: #acacac;
+}
 .ace_gutter {
   background: #24292e;
   color: rgb(127, 130, 132);
