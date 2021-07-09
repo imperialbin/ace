@@ -18881,7 +18881,7 @@ config.defineOptions(VirtualRenderer.prototype, "renderer", {
     },
     showPrintMargin: {
         set: function() { this.$updatePrintMargin(); },
-        initialValue: true
+        initialValue: false
     },
     printMarginColumn: {
         set: function() { this.$updatePrintMargin(); },
